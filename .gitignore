@@ -1,0 +1,7 @@
+etc
+etc/*
+
+
+# models
+*/pytorch_model.bin
+pytorch_model.bin

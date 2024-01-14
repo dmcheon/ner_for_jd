@@ -1,0 +1,9 @@
+bs4
+tqdm
+
+# Tokenize
+# Stanza: https://stanfordnlp.github.io/stanza/index.html
+stanza
+
+# Transformers 
+transformers==4.35.2
