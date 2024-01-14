@@ -20,11 +20,11 @@ Utilize LLMs to make data for entity types that do not have benchmark datasets i
 5. Postprocessing
 6. Gather data and use it on downstream applications (e.g. Visualization)
 
-### Environments
+## Environments
 Please see `requirements.txt`
 Tested on Python 3.10.
 
-### How to crawl
+## How to crawl
 
 See `crawldata.py`.
 
@@ -50,12 +50,12 @@ Format (example):
 
 Learned: TBA
 
-### Tokenize
+## Tokenize
 
 Using off-the-shelf NLP model [stanza](https://stanfordnlp.github.io/stanza/index.html) by StanfordNLP group ([Qi et al 2020 and Zhang et al. 2021](https://stanfordnlp.github.io/stanza/index.html#citing-stanza-in-papers))
 
 
-### Prepare PLM - fine-tune BERT on CoNLL data
+## Prepare PLM - fine-tune BERT on CoNLL data
 
 Using Transformers library (version 4.35.2) and BERT, we trained (fine-tune) and inferenced our datasets.
 
@@ -72,11 +72,17 @@ python run_ner.py \
   --do_eval
 ```
 
-Check [`./outputs`](./outputs) for report.
+Check [`./outputs`](./outputs) for report. 
+
+Our models performance is:
+* Precision: 0.9429
+* Recall: 0.9497
+* F1: 0.9463
+* Accuracy: 0.9896
 
 `pytorch_model.bin` is omitted as it is too large (435 MB) for uploading to a github repo. (added in `.gitingnore`)
 
-### Inference prepared data using trained PLM
+## Inference prepared data using trained PLM
 
 Main code: `run_ner.py` will load our custom data processing scripts located in `custom_data/custom_data.py`.
 <br>The model will load our trained model from `$OUTPUT_PATH`.
@@ -95,11 +101,11 @@ python run_ner.py \
 Check [`./eval`](./eval) for report. Note that our inference run is on non-annotated data, which means there are no true labels. So F1 score of 0 is normal.
 <br>`./eval/predictions.txt` is the final output for our prediction.
 
-### Postprocessing 
+## Postprocessing 
 TBA
 Outputs: `origin_predict_result.csv`
 
 
-### Visualization
+## Visualization
 
 TBA!
