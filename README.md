@@ -1,4 +1,4 @@
-# PLM-based NER for JDs
+# BERT based NER for JDs
 
 My personal project - extracting information using pre-trained language models!
 
